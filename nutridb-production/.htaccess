@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# Get rid of ugly .php extensions
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^#?]*)(.*)$ /$1.php$2 [L,NE]
+
